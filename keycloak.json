@@ -1,0 +1,10 @@
+{
+  "realm": "kerberos",
+  "auth-server-url": "http://localhost:8180/auth/",
+  "ssl-required": "external",
+  "resource": "browserapp",
+  "credentials": {
+    "secret": ""
+  },
+  "confidential-port": 0
+}
