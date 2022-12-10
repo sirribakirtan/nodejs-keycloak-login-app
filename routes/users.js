@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+const keycloak = require('../config/keycloak-config.js').getKeycloak();
 var helpers = require('../helpers');
 var errors = [];
 
@@ -68,7 +69,7 @@ router.post('/register', function (req, res, next) {
 
 });
 
-router.get('/login', helpers.loginChecker, function (req, res, next) {
+router.get('/login',  function (req, res, next) {
 
   res.render('login', {
     title: 'Login'
@@ -114,6 +115,7 @@ router.post('/login', function (req, res, next) {
   });
 
 });
+
 
 router.post('/login', function (req, res, next) {
 

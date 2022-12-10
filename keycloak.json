@@ -1,10 +1,10 @@
 {
-  "realm": "kerberos",
+  "realm": "app",
   "auth-server-url": "http://localhost:8180/auth/",
   "ssl-required": "external",
-  "resource": "browserapp",
+  "resource": "nodejs-app",
   "credentials": {
-    "secret": ""
+    "secret": "vSOnxchAC6Kp96KyddvcQw3RIQMcFdas"
   },
   "confidential-port": 0
 }
