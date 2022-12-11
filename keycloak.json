@@ -1,6 +1,6 @@
 {
   "realm": "app",
-  "auth-server-url": "http://localhost:8180/auth/",
+  "auth-server-url": "http://simplelogin.iam.com:8180/auth/",
   "ssl-required": "external",
   "resource": "nodejs-app",
   "credentials": {

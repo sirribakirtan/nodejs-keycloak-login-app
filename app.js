@@ -37,7 +37,9 @@ app.use(keycloak.middleware({
 }));
 
 app.get( '/complain', keycloak.protect(), function(req, res) {
-  res.send('hello world');
+  req.session.authorised = true;
+  console.log(req);
+  res.redirect('/');
 });
 
 
