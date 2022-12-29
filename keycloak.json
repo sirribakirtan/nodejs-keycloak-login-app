@@ -1,10 +1,10 @@
 {
-  "realm": "app",
+  "realm": "kerberos",
   "auth-server-url": "http://simplelogin.iam.com:8180/auth/",
   "ssl-required": "external",
   "resource": "nodejs-app",
   "credentials": {
-    "secret": "vSOnxchAC6Kp96KyddvcQw3RIQMcFdas"
+    "secret": "0uOlvEi1Y74dr3b2FREfS6a2ymo8f5L8"
   },
   "confidential-port": 0
 }

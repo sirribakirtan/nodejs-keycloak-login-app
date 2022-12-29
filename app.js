@@ -42,6 +42,12 @@ app.get( '/complain', keycloak.protect(), function(req, res) {
   res.redirect('/');
 });
 
+app.get( '/sso', keycloak.protect(), function(req, res) {
+  req.session.authorised = true;
+  console.log(req);
+  res.redirect('/');
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
