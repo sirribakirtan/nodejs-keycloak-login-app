@@ -30,6 +30,25 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/', usersRouter);
 
+const keycloak = require('./config/keycloak-config.js').initKeycloak();
+app.use(keycloak.middleware({
+  logout: '/exit',
+  admin: '/'
+}));
+
+app.get( '/complain', keycloak.protect(), function(req, res) {
+  req.session.authorised = true;
+  console.log(req);
+  res.redirect('/');
+});
+
+app.get( '/sso', keycloak.protect(), function(req, res) {
+  req.session.authorised = true;
+  console.log(req);
+  res.redirect('/');
+});
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
